@@ -1,38 +1,48 @@
-# AI Smart Student Predictor
-# Uses Linear Regression from sklearn
+#  AI Smart Student Predictor
 
-from sklearn.linear_model import LinearRegression
-import numpy as np
+This is a simple AI-based Python project that predicts whether a student will pass or fail based on study hours.
 
-# Training data (hours studied vs result)
-# 0 = Fail, 1 = Pass
-hours = np.array([1, 2, 3, 4, 5, 6]).reshape(-1, 1)
-results = np.array([0, 0, 0, 1, 1, 1])
+##  Features
 
-# Train model
-model = LinearRegression()
-model.fit(hours, results)
+* Predict student result (Pass/Fail)
+* Uses Machine Learning (Linear Regression)
+* Simple and beginner-friendly
 
-def predict_result():
-    h = float(input("Enter study hours: "))
-    prediction = model.predict([[h]])
+##  Technologies Used
 
-    if prediction[0] >= 0.5:
-        print("✅ Prediction: PASS\n")
-    else:
-        print("❌ Prediction: FAIL\n")
+* Python
+* NumPy
+* Scikit-learn
 
-while True:
-    print("=== AI Student Predictor ===")
-    print("1. Predict Result")
-    print("2. Exit")
+## How to Run
 
-    choice = input("Enter choice: ")
+1. Install required libraries:
 
-    if choice == "1":
-        predict_result()
-    elif choice == "2":
-        print("Goodbye!")
-        break
-    else:
-        print("Invalid choice\n")
+   ```
+   pip install numpy scikit-learn
+   ```
+
+2. Run the program:
+
+   ```
+   python main.py
+   ```
+
+## How It Works
+
+The model is trained using sample data:
+
+* Input: Study hours
+* Output: Pass (1) or Fail (0)
+
+It uses Linear Regression to predict the result.
+
+## Concepts Used
+
+* Machine Learning basics
+* Linear Regression
+* Python programming
+
+## Author
+
+Ahmed Khawaja
